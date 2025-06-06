@@ -5,18 +5,27 @@ import "./style/reset.css";
 import MobileLayout from "@components/MobileLayout";
 import Toast from "./components/Toast/Toast.tsx";
 
-const enableMocking = async () => {
-  const { worker } = await import("./apis/mocks/browser.ts");
-  return worker.start();
-};
+// const enableMocking = async () => {
+//   const { worker } = await import("./apis/mocks/browser.ts");
+//   return worker.start();
+// };
 
-enableMocking().then(() => {
-  ReactDOM.createRoot(document.getElementById("root")!).render(
-    <React.StrictMode>
-      <MobileLayout>
-        <App />
-        <Toast limit={5} duration={3000} />
-      </MobileLayout>
-    </React.StrictMode>
-  );
-});
+// enableMocking().then(() => {
+//   ReactDOM.createRoot(document.getElementById("root")!).render(
+//     <React.StrictMode>
+//       <MobileLayout>
+//         <App />
+//         <Toast limit={5} duration={3000} />
+//       </MobileLayout>
+//     </React.StrictMode>
+//   );
+// });
+
+ReactDOM.createRoot(document.getElementById("root")!).render(
+  <React.StrictMode>
+    <MobileLayout>
+      <App />
+      <Toast limit={5} duration={3000} />
+    </MobileLayout>
+  </React.StrictMode>
+);
